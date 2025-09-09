@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Doorstep Services - Premium Car & Bike Wash Service</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .service-card:hover { 
+            transform: translateY(-2px); 
+            transition: all 0.3s ease; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .professional-gradient {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold bg-gradient-to-r from-slate-700 to-slate-900 bg-clip-text text-transparent">✨ Elite Doorstep Services</div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#home" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="#services" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</a>
+                        <a href="#pricing" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Pricing</a>
+                        <a href="#contact" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button onclick="toggleMobileMenu()" class="text-gray-700 hover:text-blue-600">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="md:hidden hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="#services" class="block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="#pricing" class="block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium">Pricing</a>
+                <a href="#contact" class="block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium">Contact</a>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 pt-16 pb-20 relative">
+        <div class="absolute inset-0 bg-black opacity-20"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Left Content -->
+                <div class="text-center lg:text-left">
+                    <div class="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        Trusted by 5,000+ Customers
+                    </div>
+                    
+                    <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                        Professional Vehicle
+                        <span class="block text-blue-400">Detailing Services</span>
+                    </h1>
+                    
+                    <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Experience premium automotive care with our comprehensive cleaning and detailing solutions. We deliver exceptional results using industry-leading techniques and professional-grade products.
+                    </p>
+                    
+                    <!-- Service Area Badge -->
+                    <div class="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium mb-8">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                        </svg>
+                        Services Available in Hyderabad & Bangalore
+                    </div>
+                    
+                    <!-- Action Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
+                        <button onclick="scrollToServices()" class="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg">
+                            View Services
+                        </button>
+                        <a href="#contact" class="border-2 border-gray-300 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-gray-900 transition-colors text-center">
+                            Contact Us
+                        </a>
+                    </div>
+                    
+                    <!-- Trust Indicators -->
+                    <div class="grid grid-cols-3 gap-6 max-w-lg mx-auto lg:mx-0">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-white">5,000+</div>
+                            <div class="text-sm text-gray-400">Vehicles Serviced</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-white">4.9/5</div>
+                            <div class="text-sm text-gray-400">Customer Rating</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-white">2+</div>
+                            <div class="text-sm text-gray-400">Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Visual -->
+                <div class="relative">
+                    <div class="bg-white rounded-2xl p-8 shadow-2xl">
+                        <div class="text-center">
+                            <svg class="w-48 h-32 mx-auto mb-6 text-blue-600" fill="currentColor" viewBox="0 0 200 120">
+                                <!-- Car shadow -->
+                                <ellipse cx="100" cy="110" rx="80" ry="8" fill="rgba(0,0,0,0.1)"/>
+                                
+                                <!-- Main car body -->
+                                <path d="M30 70 L40 50 L50 40 L150 40 L160 50 L170 70 L170 85 L160 85 L160 75 L40 75 L40 85 L30 85 Z" fill="currentColor" stroke="rgba(0,0,0,0.2)" stroke-width="1"/>
+                                
+                                <!-- Car roof -->
+                                <path d="M50 40 L60 25 L140 25 L150 40" fill="currentColor" stroke="rgba(0,0,0,0.2)" stroke-width="1"/>
+                                
+                                <!-- Windshield -->
+                                <path d="M60 25 L65 30 L135 30 L140 25" fill="rgba(135, 206, 235, 0.6)" stroke="rgba(0,0,0,0.3)" stroke-width="1"/>
+                                
+                                <!-- Side windows -->
+                                <path d="M65 30 L70 40 L130 40 L135 30" fill="rgba(135, 206, 235, 0.6)" stroke="rgba(0,0,0,0.3)" stroke-width="1"/>
+                                
+                                <!-- Front bumper -->
+                                <rect x="165" y="60" width="8" height="15" fill="currentColor" stroke="rgba(0,0,0,0.2)" stroke-width="1"/>
+                                
+                                <!-- Rear bumper -->
+                                <rect x="27" y="60" width="8" height="15" fill="currentColor" stroke="rgba(0,0,0,0.2)" stroke-width="1"/>
+                                
+                                <!-- Front wheel -->
+                                <circle cx="50" cy="75" r="12" fill="rgba(0,0,0,0.8)" stroke="rgba(0,0,0,0.9)" stroke-width="2"/>
+                                <circle cx="50" cy="75" r="8" fill="rgba(100,100,100,0.8)"/>
+                                <circle cx="50" cy="75" r="4" fill="rgba(150,150,150,0.9)"/>
+                                
+                                <!-- Rear wheel -->
+                                <circle cx="150" cy="75" r="12" fill="rgba(0,0,0,0.8)" stroke="rgba(0,0,0,0.9)" stroke-width="2"/>
+                                <circle cx="150" cy="75" r="8" fill="rgba(100,100,100,0.8)"/>
+                                <circle cx="150" cy="75" r="4" fill="rgba(150,150,150,0.9)"/>
+                                
+                                <!-- Headlights -->
+                                <ellipse cx="173" cy="55" rx="4" ry="6" fill="rgba(255, 255, 200, 0.9)" stroke="rgba(0,0,0,0.3)" stroke-width="1"/>
+                                <ellipse cx="173" cy="68" rx="4" ry="6" fill="rgba(255, 255, 200, 0.9)" stroke="rgba(0,0,0,0.3)" stroke-width="1"/>
+                                
+                                <!-- Taillights -->
+                                <ellipse cx="27" cy="55" rx="3" ry="5" fill="rgba(255, 0, 0, 0.8)" stroke="rgba(0,0,0,0.3)" stroke-width="1"/>
+                                <ellipse cx="27" cy="68" rx="3" ry="5" fill="rgba(255, 0, 0, 0.8)" stroke="rgba(0,0,0,0.3)" stroke-width="1"/>
+                                
+                                <!-- Door handles -->
+                                <rect x="85" y="50" width="4" height="3" fill="rgba(0,0,0,0.6)" rx="1"/>
+                                <rect x="115" y="50" width="4" height="3" fill="rgba(0,0,0,0.6)" rx="1"/>
+                                
+                                <!-- Side mirrors -->
+                                <ellipse cx="45" cy="45" rx="3" ry="2" fill="currentColor" stroke="rgba(0,0,0,0.3)" stroke-width="1"/>
+                                <ellipse cx="155" cy="45" rx="3" ry="2" fill="currentColor" stroke="rgba(0,0,0,0.3)" stroke-width="1"/>
+                                
+                                <!-- Grille -->
+                                <rect x="168" y="58" width="5" height="8" fill="rgba(0,0,0,0.6)" stroke="rgba(0,0,0,0.8)" stroke-width="1"/>
+                                <line x1="169" y1="60" x2="172" y2="60" stroke="rgba(150,150,150,0.8)" stroke-width="0.5"/>
+                                <line x1="169" y1="62" x2="172" y2="62" stroke="rgba(150,150,150,0.8)" stroke-width="0.5"/>
+                                <line x1="169" y1="64" x2="172" y2="64" stroke="rgba(150,150,150,0.8)" stroke-width="0.5"/>
+                            </svg>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">Premium Care</h3>
+                            <p class="text-gray-600">Professional detailing that exceeds expectations</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Feature Badges -->
+                    <div class="absolute -top-4 -left-4 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <div class="absolute -top-4 -right-4 bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Feature Highlights -->
+            <div class="mt-20 grid md:grid-cols-4 gap-8">
+                <div class="text-center p-6 bg-white bg-opacity-10 backdrop-blur-sm rounded-xl border border-white border-opacity-20">
+                    <svg class="w-12 h-12 mx-auto mb-4 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <div class="text-white font-semibold mb-2">Premium Products</div>
+                    <div class="text-gray-300 text-sm">Professional-grade cleaning solutions and materials</div>
+                </div>
+                <div class="text-center p-6 bg-white bg-opacity-10 backdrop-blur-sm rounded-xl border border-white border-opacity-20">
+                    <svg class="w-12 h-12 mx-auto mb-4 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                    </svg>
+                    <div class="text-white font-semibold mb-2">Efficient Service</div>
+                    <div class="text-gray-300 text-sm">Quick turnaround without compromising quality</div>
+                </div>
+                <div class="text-center p-6 bg-white bg-opacity-10 backdrop-blur-sm rounded-xl border border-white border-opacity-20">
+                    <svg class="w-12 h-12 mx-auto mb-4 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                    </svg>
+                    <div class="text-white font-semibold mb-2">Quality Assured</div>
+                    <div class="text-gray-300 text-sm">Professional standards with satisfaction guarantee</div>
+                </div>
+                <div class="text-center p-6 bg-white bg-opacity-10 backdrop-blur-sm rounded-xl border border-white border-opacity-20">
+                    <svg class="w-12 h-12 mx-auto mb-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z"></path>
+                    </svg>
+                    <div class="text-white font-semibold mb-2">Expert Team</div>
+                    <div class="text-gray-300 text-sm">Trained professionals with 5+ years of experience</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white relative">
+        <!-- Car Background Pattern -->
+        <div class="absolute inset-0 opacity-5">
+            <svg class="w-full h-full" viewBox="0 0 400 400" fill="none">
+                <defs>
+                    <pattern id="carPattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+                        <g transform="translate(20,40)">
+                            <!-- Car silhouette -->
+                            <path d="M5 20 L10 15 L15 10 L45 10 L50 15 L55 20 L55 30 L50 30 L50 25 L10 25 L10 30 L5 30 Z" fill="currentColor"/>
+                            <!-- Wheels -->
+                            <circle cx="15" cy="25" r="4" fill="none" stroke="currentColor" stroke-width="1"/>
+                            <circle cx="45" cy="25" r="4" fill="none" stroke="currentColor" stroke-width="1"/>
+                        </g>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#carPattern)" class="text-blue-600"/>
+            </svg>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    From basic washes to premium detailing, we offer comprehensive cleaning solutions for all vehicles.
+                </p>
+                <div class="mt-4 inline-flex items-center bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-sm font-medium">
+                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                    </svg>
+                    Available in Hyderabad & Bangalore
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Car Services -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+                    <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"></path>
+                            <path d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1V5a1 1 0 00-1-1H3zM14 7a1 1 0 00-1 1v6.05A2.5 2.5 0 0115.95 16H17a1 1 0 001-1V8a1 1 0 00-1-1h-3z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Automotive Detailing</h3>
+                    <ul class="space-y-3 text-gray-700 mb-6">
+                        <li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Exterior wash & protective wax</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Interior vacuum & sanitization</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Tire treatment & rim detailing</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Dashboard & leather conditioning</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Paint correction available</li>
+                    </ul>
+                    <div class="bg-blue-50 p-4 rounded-lg mb-6">
+                        <h4 class="font-semibold text-blue-900 mb-2 flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+                            </svg>
+                            Requirements
+                        </h4>
+                        <ul class="text-sm text-blue-800 space-y-1">
+                            <li>• 2 buckets of water</li>
+                            <li>• Power supply access</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold text-center block">
+                        Contact for Automotive Service
+                    </a>
+                </div>
+
+                <!-- Bike Services -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+                    <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zM3 15a1 1 0 011-1h1a1 1 0 011 1v1a1 1 0 01-1 1H4a1 1 0 01-1-1v-1zm7-13a1 1 0 011 1v9a1 1 0 11-2 0V3a1 1 0 011-1z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Motorcycle Care</h3>
+                    <ul class="space-y-3 text-gray-700 mb-6">
+                        <li class="flex items-center"><span class="w-2 h-2 bg-green-600 rounded-full mr-3"></span>Complete motorcycle washing</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-green-600 rounded-full mr-3"></span>Chain cleaning & lubrication</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-green-600 rounded-full mr-3"></span>Wheel & brake system cleaning</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-green-600 rounded-full mr-3"></span>Chrome & metal polishing</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-green-600 rounded-full mr-3"></span>Engine bay detailing</li>
+                    </ul>
+                    <div class="bg-green-50 p-4 rounded-lg mb-6">
+                        <h4 class="font-semibold text-green-900 mb-2 flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+                            </svg>
+                            Requirements
+                        </h4>
+                        <ul class="text-sm text-green-800 space-y-1">
+                            <li>• 2 buckets of water</li>
+                            <li>• Power supply access</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors font-semibold text-center block">
+                        Contact for Motorcycle Service
+                    </a>
+                </div>
+
+                <!-- Premium Package -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg border-2 border-blue-200 relative md:col-span-2 lg:col-span-1">
+                    <div class="absolute -top-3 left-6 bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                        Premium
+                    </div>
+                    <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6 mt-4">
+                        <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Executive Detailing</h3>
+                    <ul class="space-y-3 text-gray-700 mb-6">
+                        <li class="flex items-center"><span class="w-2 h-2 bg-purple-600 rounded-full mr-3"></span>Complete concierge detailing</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-purple-600 rounded-full mr-3"></span>Paint protection & ceramic coating</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-purple-600 rounded-full mr-3"></span>Interior deep restoration</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-purple-600 rounded-full mr-3"></span>Premium leather treatment</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-purple-600 rounded-full mr-3"></span>30-day satisfaction guarantee</li>
+                    </ul>
+                    <div class="bg-purple-50 p-4 rounded-lg mb-6">
+                        <h4 class="font-semibold text-purple-900 mb-2 flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+                            </svg>
+                            Requirements
+                        </h4>
+                        <ul class="text-sm text-purple-800 space-y-1">
+                            <li>• 2 buckets of water</li>
+                            <li>• Power supply access</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold text-center block">
+                        Contact for Executive Service
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-gradient-to-br from-slate-800 to-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Transparent Pricing</h2>
+                <p class="text-xl text-gray-300">No hidden fees, just honest pricing for quality service.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
+                <!-- Basic Car Wash - ₹499 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-2 border-green-400 relative h-full flex flex-col">
+                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-green-400 text-white px-3 py-1 rounded-full text-xs font-semibold">Basic</span>
+                    </div>
+                    <div class="text-center flex-grow flex flex-col">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Basic Car Wash</h3>
+                        <div class="text-3xl font-bold text-green-400 mb-3">₹499</div>
+                        <p class="text-gray-600 mb-4 text-sm">Perfect for regular maintenance</p>
+                        <ul class="text-left space-y-1 text-gray-700 mb-6 text-sm flex-grow">
+                            <li>✓ Full exterior pressure wash</li>
+                            <li>✓ Interior vacuum cleaning</li>
+                            <li>✓ Dashboard shine polish</li>
+                            <li>✓ Glass and mirrors cleaned</li>
+                            <li>✓ Floor mats & under-seat vacuumed</li>
+                            <li>✓ Wheels & tyres cleaned and polished</li>
+                        </ul>
+                        <a href="#contact" class="w-full bg-green-400 text-white py-2 rounded-lg hover:bg-green-500 transition-colors text-center block text-sm mt-auto">
+                            Contact for Basic
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Engine Bay Steam Wash - ₹599 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-2 border-green-400 relative h-full flex flex-col">
+                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-green-400 text-white px-3 py-1 rounded-full text-xs font-semibold">Steam Clean</span>
+                    </div>
+                    <div class="text-center flex-grow flex flex-col">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Engine Bay Steam Wash</h3>
+                        <div class="text-3xl font-bold text-green-400 mb-3">₹599</div>
+                        <p class="text-gray-600 mb-4 text-sm">Deep engine bay cleaning</p>
+                        <ul class="text-left space-y-1 text-gray-700 mb-6 text-sm flex-grow">
+                            <li>✓ Deep steam cleaning of engine bay</li>
+                            <li>✓ Eliminates grease, dirt & carbon buildup</li>
+                            <li>✓ Enhances cooling efficiency & extends engine life</li>
+                            <li>✓ Safe process using eco-friendly steam technology</li>
+                        </ul>
+                        <a href="#contact" class="w-full bg-green-400 text-white py-2 rounded-lg hover:bg-green-500 transition-colors text-center block text-sm mt-auto">
+                            Contact for Engine Bay
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Premium Deep Cleaning - ₹2,299 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-2 border-green-400 relative h-full flex flex-col">
+                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-green-400 text-white px-3 py-1 rounded-full text-xs font-semibold">Most Popular</span>
+                    </div>
+                    <div class="text-center flex-grow flex flex-col">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Premium Deep Cleaning</h3>
+                        <div class="text-3xl font-bold text-green-400 mb-3">₹2,299</div>
+                        <p class="text-gray-600 mb-4 text-sm">Complete deep cleaning</p>
+                        <ul class="text-left space-y-1 text-gray-700 mb-6 text-sm flex-grow">
+                            <li>✓ Complete exterior pressure wash</li>
+                            <li>✓ Full interior vacuuming</li>
+                            <li>✓ Seats foam shampoo treatment</li>
+                            <li>✓ Engine bay cleaning</li>
+                            <li>✓ Dashboard & AC vents detailed</li>
+                            <li>✓ Roof & headliner cleaning</li>
+                            <li>✓ Mats, glass, wheels & tyres polished</li>
+                        </ul>
+                        <a href="#contact" class="w-full bg-green-400 text-white py-2 rounded-lg hover:bg-green-500 transition-colors text-center block text-sm mt-auto">
+                            Contact for Premium
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Rubbing & Shine Polish - ₹3,399 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-2 border-green-400 relative h-full flex flex-col">
+                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-green-400 text-white px-3 py-1 rounded-full text-xs font-semibold">Professional</span>
+                    </div>
+                    <div class="text-center flex-grow flex flex-col">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Rubbing & Shine Polish</h3>
+                        <div class="text-3xl font-bold text-green-400 mb-3">₹3,399</div>
+                        <p class="text-gray-600 mb-4 text-sm">Professional polish treatment</p>
+                        <ul class="text-left space-y-1 text-gray-700 mb-6 text-sm flex-grow">
+                            <li>✓ Complete interior vacuuming</li>
+                            <li>✓ Mat cleaning & dashboard polish</li>
+                            <li>✓ Glass cleaning & tire polish</li>
+                            <li>✓ Exterior high-pressure foam wash</li>
+                            <li>✓ Rubbing to remove scratches & stains</li>
+                            <li>✓ Shine layer polish for lasting gloss</li>
+                        </ul>
+                        <a href="#contact" class="w-full bg-green-400 text-white py-2 rounded-lg hover:bg-green-500 transition-colors text-center block text-sm mt-auto">
+                            Contact for Polish
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Ceramic Coating - ₹14,999 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-2 border-green-400 relative h-full flex flex-col">
+                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-green-400 text-white px-3 py-1 rounded-full text-xs font-semibold">Premium</span>
+                    </div>
+                    <div class="text-center flex-grow flex flex-col">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Ceramic Coating</h3>
+                        <div class="text-3xl font-bold text-green-400 mb-1">₹14,999</div>
+                        <div class="text-sm text-green-400 font-semibold mb-3">2-Year Protection</div>
+                        <p class="text-gray-600 mb-4 text-sm">Ultimate protection package</p>
+                        <ul class="text-left space-y-1 text-gray-700 mb-6 text-sm flex-grow">
+                            <li>✓ Complete interior & exterior detailing</li>
+                            <li>✓ Full rubbing & polishing treatment</li>
+                            <li>✓ Premium ceramic coating application</li>
+                            <li>✓ 2-year durability guarantee</li>
+                            <li>✓ Professional-grade protection</li>
+                            <li>✓ Long-lasting shine & protection</li>
+                        </ul>
+                        <a href="#contact" class="w-full bg-green-400 text-white py-2 rounded-lg hover:bg-green-500 transition-colors text-center block text-sm mt-auto">
+                            Contact for Ceramic
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Paint Protection Film (PPF) - ₹95,000 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-2 border-yellow-400 relative h-full flex flex-col">
+                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-gradient-to-r from-yellow-400 to-yellow-600 text-white px-3 py-1 rounded-full text-xs font-semibold">Ultimate</span>
+                    </div>
+                    <div class="text-center flex-grow flex flex-col">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Paint Protection Film (PPF)</h3>
+                        <div class="text-3xl font-bold bg-gradient-to-r from-yellow-500 to-yellow-600 bg-clip-text text-transparent mb-1">₹95,000</div>
+                        <div class="text-sm text-yellow-600 font-semibold mb-3">+ GST</div>
+                        <p class="text-gray-600 mb-4 text-sm">Maximum protection solution</p>
+                        <ul class="text-left space-y-1 text-gray-700 mb-6 text-sm flex-grow">
+                            <li>✓ Warranty: 10 years comprehensive coverage</li>
+                            <li>✓ Thickness: 240-micron advanced protective layer</li>
+                            <li>✓ Quality Assurance: Installed using branded</li>
+                            <li>✓ High-grade products with expert precision</li>
+                            <li>✓ Ensuring long-lasting durability</li>
+                            <li>✓ Superior finish guaranteed</li>
+                        </ul>
+                        <a href="#contact" class="w-full bg-gradient-to-r from-yellow-500 to-yellow-600 text-white py-2 rounded-lg hover:from-yellow-600 hover:to-yellow-700 transition-colors text-center block text-sm mt-auto">
+                            Contact for PPF
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-12 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Get In Touch</h2>
+                <p class="text-gray-600">Ready to give your vehicle the care it deserves?</p>
+                <div class="mt-4 inline-flex items-center bg-gradient-to-r from-green-50 to-blue-50 text-gray-800 px-6 py-3 rounded-full text-lg font-semibold shadow-sm border border-green-200">
+                    <svg class="w-5 h-5 mr-3 text-gray-600 opacity-80" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                    </svg>
+                    Serving Hyderabad & Bangalore
+                </div>
+            </div>
+            
+            <div class="bg-gray-50 p-6 rounded-xl">
+                <div class="grid md:grid-cols-4 gap-6 text-center">
+                    <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl shadow-lg border border-blue-100">
+                        <div class="flex justify-center mb-4">
+                            <div class="bg-gradient-to-r from-blue-500 to-indigo-600 p-3 rounded-full shadow-lg">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h4 class="font-bold text-gray-900 mb-3 text-lg text-center">Call Us</h4>
+                        <div class="space-y-2 mb-4">
+                            <p class="text-gray-900 font-semibold text-center">+91 8971044069</p>
+                            <p class="text-gray-900 font-semibold text-center">+91 8792126143</p>
+                        </div>
+                        <div class="flex justify-center">
+                            <a href="https://wa.me/918971044069" target="_blank" class="inline-flex items-center bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors shadow-md">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.516"/>
+                                </svg>
+                                WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl shadow-lg border border-purple-100 md:col-span-2">
+                        <div class="flex justify-center mb-4">
+                            <div class="bg-gradient-to-r from-purple-500 to-pink-600 p-3 rounded-full shadow-lg">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h4 class="font-bold text-gray-900 mb-3 text-lg text-center">Email Us</h4>
+                        <p class="text-gray-900 font-semibold text-center">elitedoorstepservices3@gmail.com</p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl shadow-lg border border-green-100">
+                        <div class="flex justify-center mb-4">
+                            <div class="bg-gradient-to-r from-green-500 to-emerald-600 p-3 rounded-full shadow-lg">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h4 class="font-bold text-gray-900 mb-3 text-lg text-center">Office Address</h4>
+                        <p class="text-gray-900 text-sm text-center leading-relaxed">Balaji Layout<br>Near Dominoz Pizza<br>Vajarahalli - 560062</p>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-6 pt-4 border-t border-gray-200">
+                    <p class="text-gray-600 text-sm">
+                        <span class="font-semibold">Hours:</span> Mon-Sunday: 8AM-6PM
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-2xl font-bold mb-4 bg-gradient-to-r from-gray-300 to-white bg-clip-text text-transparent">✨ Elite Doorstep Services</div>
+                    <p class="text-gray-400">Premium car and bike wash service with professional products and expert care.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Car Washing</li>
+                        <li>Bike Cleaning</li>
+                        <li>Premium Detailing</li>
+                        <li>Paint Protection</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#home" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Services</a></li>
+                        <li><a href="#pricing" class="hover:text-white transition-colors">Pricing</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+                    <div class="flex flex-col space-y-3">
+                        <button onclick="openSocial('facebook')" class="flex items-center text-gray-400 hover:text-blue-400 transition-colors">
+                            <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                            Facebook
+                        </button>
+                        <button onclick="openSocial('instagram')" class="flex items-center text-gray-400 hover:text-pink-400 transition-colors">
+                            <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                            Instagram
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Elite Doorstep Services. All rights reserved. | Professional car and bike wash service.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Smooth scrolling
+        function scrollToServices() {
+            document.getElementById('services').scrollIntoView({ behavior: 'smooth' });
+        }
+
+
+
+        // Social media links
+        function openSocial(platform) {
+            if (platform === 'facebook') {
+                window.open('https://facebook.com/elitedoorstepservices', '_blank');
+            } else if (platform === 'instagram') {
+                window.open('https://instagram.com/elitedoorstepservices', '_blank');
+            }
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Close mobile menu when clicking on links
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobileMenu').classList.add('hidden');
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97b7e87a30493b34',t:'MTc1NzI2NTk1NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
